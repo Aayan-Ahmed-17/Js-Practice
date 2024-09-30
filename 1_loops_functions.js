@@ -9,6 +9,8 @@
 ?06 Explain the purpose of the break statement in a loop and provide an example of when you would use it.
 ?07 Describe the continue statement and demonstrate its usage in a loop.
 ?08 Write a nested for loop that creates a 3x3 multiplication table.
+?09 Create a loop that iterates from 1 to 20 and prints "Fizz" if the number is divisible by 3, "Buzz" if the number is divisible by 5, and "FizzBuzz" if the number is divisible by both 3 and 5.
+?10 Implement a loop that generates the first 10 Fibonacci numbers and stores them in an array.
 
 */
 
@@ -85,3 +87,23 @@ for (let i = 1; i <= 3; i++) {
     }
     //   console.log(row.trim()); //Will remove last space of row string
 }
+
+//* 09
+for (let i = 1; i <= 20; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+        // console.log("FizzBuzz");
+    } else if (i % 3 === 0) {
+        // console.log("Fizz");
+    } else if (i % 5 === 0) {
+        // console.log("Buzz");
+    } else {
+        // console.log(i);
+    }
+}
+
+//* 10
+let fibonacciSeries = [0, 1];
+for (let i = 0; i <= 7; i++){
+    fibonacciSeries.push(fibonacciSeries[i] + fibonacciSeries[i + 1])
+}
+// console.log(fibonacciSeries)
