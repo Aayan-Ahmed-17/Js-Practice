@@ -11,6 +11,7 @@
 ?08 Write a nested for loop that creates a 3x3 multiplication table.
 ?09 Create a loop that iterates from 1 to 20 and prints "Fizz" if the number is divisible by 3, "Buzz" if the number is divisible by 5, and "FizzBuzz" if the number is divisible by both 3 and 5.
 ?10 Implement a loop that generates the first 10 Fibonacci numbers and stores them in an array.
+?11 Write a loop that reverses the order of the elements in an array.
 
 */
 
@@ -107,3 +108,14 @@ for (let i = 0; i <= 7; i++){
     fibonacciSeries.push(fibonacciSeries[i] + fibonacciSeries[i + 1])
 }
 // console.log(fibonacciSeries)
+
+//*11
+function reverseOrder(...n) {
+    let arrLen = n.length - 1;
+    let output = [];
+    for (let i = arrLen; i >= 0; i--) {
+      output.push(n[i]);
+    }
+    return output;
+  }
+  console.log(reverseOrder("ahzam", "aayan", "owais", "umais", "annas"))
