@@ -12,6 +12,8 @@
 ?09 Create a loop that iterates from 1 to 20 and prints "Fizz" if the number is divisible by 3, "Buzz" if the number is divisible by 5, and "FizzBuzz" if the number is divisible by both 3 and 5.
 ?10 Implement a loop that generates the first 10 Fibonacci numbers and stores them in an array.
 ?11 Write a loop that reverses the order of the elements in an array.
+?12 Use a for-of loop to iterate over the characters in a string and log each character to the console.
+?13 Implement a loop that iterates over an array of objects, and for each object, print its properties to the console.
 
 */
 
@@ -119,3 +121,39 @@ function reverseOrder(...n) {
     return output;
   }
   console.log(reverseOrder("ahzam", "aayan", "owais", "umais", "annas"))
+
+//* 12
+
+let vowels = "aeiou";
+for (const char of vowels) {
+  console.log(char)
+}
+
+//* 13
+const arrOfObj = [
+  {
+    name: "Aayan Ahmed",
+    age: 18,
+    id: 55516,
+  },
+  {
+    name: "Usama",
+    age: 19,
+    id: 42347,
+  },
+  {
+    name: "Omais",
+    age: 21,
+    id: 39906,
+  },
+  {
+    name: "Annas Ahmed",
+    age: 22,
+    id: 36807,
+  },
+];
+for (const obj of arrOfObj) {
+  for (let value in obj) {
+    console.log(value, obj[value], typeof value, typeof obj[value])
+  }
+}
