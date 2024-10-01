@@ -14,6 +14,7 @@
 ?11 Write a loop that reverses the order of the elements in an array.
 ?12 Use a for-of loop to iterate over the characters in a string and log each character to the console.
 ?13 Implement a loop that iterates over an array of objects, and for each object, print its properties to the console.
+?14 Create a loop that takes an array of numbers and returns a new array with only the positive numbers.
 
 */
 
@@ -157,3 +158,12 @@ for (const obj of arrOfObj) {
     console.log(value, obj[value], typeof value, typeof obj[value])
   }
 }
+
+//* 14
+const nums = [24, -3, 0, 23, 20, -18, 18, 40, 6, 34, -0.5, 16, 19, 30]
+const positiveNums = [];
+for (const num of nums) {
+    if(num < 0) continue;
+    else positiveNums.push(num)
+}
+console.log(positiveNums)
