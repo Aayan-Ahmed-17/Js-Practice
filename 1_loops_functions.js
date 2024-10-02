@@ -160,10 +160,49 @@ for (const obj of arrOfObj) {
 }
 
 //* 14
-const nums = [24, -3, 0, 23, 20, -18, 18, 40, 6, 34, -0.5, 16, 19, 30]
+const nums1 = [24, -3, 0, 23, 20, -18, 18, 40, 6, 34, -0.5, 16, 19, 30]
 const positiveNums = [];
-for (const num of nums) {
+for (const num of nums1) {
     if(num < 0) continue;
     else positiveNums.push(num)
 }
 console.log(positiveNums)
+
+/*
+*-----------Function Questions
+
+?01 Define a function that takes two numbers as arguments and returns their sum.
+?02 Implement a function that takes a string as an argument and returns the length of the string.
+?03 Write a function that takes an array of numbers as an argument and returns the average of the numbers.
+
+*/
+
+//* Function Answers
+
+//* 01
+function sumFunc(a, b) {
+    return a + b;
+  }
+  let result = sumFunc(5, 6);
+  // console.log(result);
+  
+  //* 02
+  let str = "Aayan Ahmed";
+  function findLength(string) {
+    return string.length;
+  }
+  let length = findLength(str);
+  // console.log(length);
+  
+  //* 03
+  const nums2 = [24, -3, 0, 23, 20, -18, 18, 40, 6, 34, -0.5, 16, 19, 30];
+  function findAvg(arr) {
+    let sum = 0;
+    for (const num of arr) {
+      sum += num;
+    }
+    sum /= arr.length;
+    return sum;
+  }
+  let avg = findAvg(nums2);
+  console.log(avg)
