@@ -81,6 +81,8 @@ const [
 ?02 title as itemName and price as itemPrice
 ?03 Extract theme and missing fontSize with default value 16
 ?04 Extract firstName from nested Object
+?05 Extract company name, country, and city name
+?06 Extract first item's name
 */
 
 //* 01
@@ -106,3 +108,41 @@ const user = {
 //! changed the key firstName => userFirstName bcz FirstName is already declared
 const {details : {firstName : userFirstName}} = user //* done
 
+//* 05
+const company = {
+    name: 'Tech Corp',
+    location: {
+        country: 'USA',
+        city: {
+            name: 'Silicon Valley',
+            zip: '94025'
+        }
+    }
+};
+
+//! changed the keys name too bcz already declared
+const {
+    name : compName, 
+    location : {
+        country : compCountry, 
+        city : {
+            name : compCityName
+        }
+    }
+} = company //* done
+
+//* 06 
+const response = {
+    data: {
+        items: [
+            { id: 1, name: 'Item 1' },
+            { id: 2, name: 'Item 2' }
+        ]
+    }
+};
+
+const {
+    data : {
+        items: [{name: firstIteName}]
+    }
+} = response //* done
