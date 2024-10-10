@@ -83,6 +83,8 @@ const [
 ?04 Extract firstName from nested Object
 ?05 Extract company name, country, and city name
 ?06 Extract first item's name
+?07 Create a function that accepts an object and destructures multiple levels
+
 */
 
 //* 01
@@ -146,3 +148,14 @@ const {
         items: [{name: firstIteName}]
     }
 } = response //* done
+
+//* 07
+function processUser({
+    name,
+    // THIS = {} IS AN OPT VAL IF NO ARG WAS PASSED STILL GET NO ERROR WITHOUT THIS WE CAN FACE ERROR
+    address: { street, city } = {},
+    settings: { theme = 'light' } = {}
+} = {}) {
+    return `${name} lives in ${city} on ${street}, prefers ${theme} theme`;
+}
+console.log(processUser())
