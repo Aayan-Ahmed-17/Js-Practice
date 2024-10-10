@@ -73,3 +73,36 @@ const [
     [,[,num8]], 
     addFunc
 ] = processData() //* done
+
+// =========================Object Destructuring Q/A s==========================
+
+/*
+?01 Extract name and age
+?02 title as itemName and price as itemPrice
+?03 Extract theme and missing fontSize with default value 16
+?04 Extract firstName from nested Object
+*/
+
+//* 01
+const person = { name: 'John', age: 30, city: 'New York' };
+const {name, age} = person //* done
+
+//* 02
+const item = { id: 1, title: 'Book', price: 29.99 };
+const {title : itemName, price : itemPrice} = item //* done
+
+//* 03
+const config = { theme: 'dark' };
+const {theme = "light", fontSize = 16} = config //* done
+
+//* 04
+const user = {
+    details: {
+        firstName: 'John',
+        lastName: 'Doe'
+    }
+};
+
+//! changed the key firstName => userFirstName bcz FirstName is already declared
+const {details : {firstName : userFirstName}} = user //* done
+
