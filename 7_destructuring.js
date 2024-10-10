@@ -5,6 +5,8 @@
 ?02 Get only the third element from the array
 ?03 Get the first element and store the rest in a new array
 ?04 Destructure array with default values for missing elements
+?05 Extract the second element from the first sub-array
+?06 Swap x and y using destructuring
 */
 
 // ==========================Ans=====================
@@ -22,5 +24,14 @@ const [firstNum, ...restNum] = numbers //* done
 
 //* 04 
 const settings = ['dark'];
-const [theme1, theme2 = "light"] = settings
-console.log(theme1, theme2)
+const [theme1, theme2 = "light"] = settings //* done
+
+//* 05
+const matrix = [[1, 2], [3, 4], [5, 6]];
+const [,secondElem] = matrix[0] //* done
+
+//* 06
+let x = 5;
+let y = 10;
+[x, y] = [y, x] //* done
+
